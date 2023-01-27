@@ -13,9 +13,18 @@
         android:layout_gravity="center"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:hint="아이디 입력"
+        android:hint="이메일 입력"
         tools:layout_editor_absoluteY="55dp" />
-
+    <EditText
+        android:id="@+id/nickedt"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="닉네임 입력"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.482"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="134dp" />
     <Button
         android:layout_gravity="center"
         android:id="@+id/postbutton"

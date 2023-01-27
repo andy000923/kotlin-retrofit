@@ -17,13 +17,15 @@ class MainActivity : AppCompatActivity() {
 
 
         binding.postbutton.setOnClickListener {
-            val data = PostModel(binding.idedt.text.toString())
+            val data = PostModel(binding.idedt.text.toString(),binding.nickedt.text.toString())
             api.post_users(data).enqueue(object : Callback<PostResult> {
                 override fun onResponse(call: Call<PostResult>, response: Response<PostResult>) {
                     Log.d("log",response.toString())
+
                     Log.d("log",response.body().toString())
                     if(!response.body().toString().isEmpty())
-                        binding.text.setText(response.body().toString());
+                        binding.text.setText(response.body().toString())
+                    Log.d("log",response.body().toString())
                 }
                 override fun onFailure(call: Call<PostResult>, t: Throwable) {
                     // 실패

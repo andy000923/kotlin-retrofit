@@ -2,9 +2,12 @@ package com.umc.test
 
 
 data class PostModel(
-    var accessToken : String
+    var email : String,
+    var name : String
+
 )
 
+
 data class PostResult(
-    var result:String
+    var token : String
 )
